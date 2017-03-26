@@ -3,7 +3,6 @@
 // ==========================================================================
 
 // Clearfix
-
 %clearfix {
   &:after {
     content: "";
@@ -12,8 +11,8 @@
   }
 }
 
-// Screen reader text
 
+// Screen reader text
 .srt {
 	border: 0;
 	clip: rect(0 0 0 0);
@@ -25,10 +24,10 @@
 	width: 1px;
 }
 
-// For pseudo-elements
 
+// For pseudo-elements
 %pseudos {
   display: block;
-  content: ''; 
+  content: '';
   position: absolute;
 }
