@@ -1,3 +1,22 @@
 // ================================================================
 // Images
 // ================================================================
+
+
+.img {
+
+  @include m(wrap) {
+    border: 1px solid palette(grey, x-light);
+    padding-left: em(12px);
+  }
+
+  @include m(avatar) {
+    display: block;
+    border-radius: $br--round;
+  }
+
+  @include m(hero) {
+    margin-bottom: em(42px);
+  }
+
+}
