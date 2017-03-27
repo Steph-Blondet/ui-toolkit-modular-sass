@@ -19,3 +19,10 @@
 @function palette($palette, $shade: 'base') {
 	@return map-get(map-get($palettes, $palette), $shade);
 }
+
+
+// Set the "context" width for the g-gutter-width
+@function g-content($g-col-width, $g-col-count, $g-gutter-width) {
+  $g-context: ($g-col-width * $g-col-count) + ($g-col-width * ( $g-col-count - 1));
+  @return $g-context;
+}
