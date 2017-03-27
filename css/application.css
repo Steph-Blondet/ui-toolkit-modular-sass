@@ -283,6 +283,42 @@ button {
   margin: 0 auto;
   padding: 0 0.9375em 0 0.9375em; }
 
+.grid__col--1 {
+  width: 4.34783%; }
+
+.grid__col--2 {
+  width: 10.03344%; }
+
+.grid__col--3 {
+  width: 15.71906%; }
+
+.grid__col--4 {
+  width: 21.40468%; }
+
+.grid__col--5 {
+  width: 27.0903%; }
+
+.grid__col--6 {
+  width: 32.77592%; }
+
+.grid__col--7 {
+  width: 38.46154%; }
+
+.grid__col--8 {
+  width: 44.14716%; }
+
+.grid__col--9 {
+  width: 49.83278%; }
+
+.grid__col--10 {
+  width: 55.51839%; }
+
+.grid__col--11 {
+  width: 61.20401%; }
+
+.grid__col--12 {
+  width: 66.88963%; }
+
 .form__btn, [class^="btn--"] {
   padding: 15px 30px;
   border: 0;
