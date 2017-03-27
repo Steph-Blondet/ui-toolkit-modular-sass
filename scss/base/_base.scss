@@ -1,6 +1,6 @@
-// ==========================================================================
+// =================================================================
 // Base Styles
-// ==========================================================================
+// =================================================================
 
 * {
 	-moz-box-sizing: border-box;
@@ -62,8 +62,8 @@ blockquote {
 	border-left: solid em(8px, 24px) palette(grey, xx-light);
 }
 
-// Lists
 
+// Lists
 ul,
 li {
   margin: 0;
@@ -71,8 +71,9 @@ li {
   list-style-type: none;
 }
 
-// Form elements
 
+
+// Form elements
 input,
 textarea {
 	display: block;
@@ -85,8 +86,9 @@ textarea:focus {
 	transition: $trns_duration;
 }
 
-// Button
 
+
+// Button
 button {
 	outline: 0;
 }

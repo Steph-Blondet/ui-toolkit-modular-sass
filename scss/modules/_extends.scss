@@ -1,9 +1,9 @@
-// ==========================================================================
-// Extends
-// ==========================================================================
+// =================================================================
+// Placeholders
+// =================================================================
+
 
 // Buttons
-
 %btn {
   padding: 15px 30px;
   border: 0;
@@ -22,8 +22,8 @@
   }
 }
 
-// Nav Items
 
+// Nav Items
 %nav-item-disp {
   display: inline-block;
   margin: 0 em(12px);
@@ -42,6 +42,7 @@
   border-color: $color-primary;
 }
 
+
 // Headlines
 %hdln-prim {
   font-weight: $font-weight--light;
@@ -58,4 +59,11 @@
 	font-size: em(24px);
 	color: palette(grey, light);
   letter-spacing: $letter-space;
+}
+
+
+// Icons
+%icn--ui {
+	line-height: 0;
+	cursor: pointer;
 }
