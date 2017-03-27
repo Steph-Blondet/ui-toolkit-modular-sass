@@ -7,7 +7,7 @@
 }
 
 [class^="btn--"] {
-  // @extend %center-align;
+  @extend %center-align;
   @extend %btn;
   margin-bottom: em(20px, 14px);
   width: auto;

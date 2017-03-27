@@ -14,6 +14,9 @@
   content: '';
   position: absolute; }
 
+.panel--centered, .panel--padded--centered, [class^="btn--"] {
+  text-align: center; }
+
 .centered {
   float: none;
   margin-left: auto;
@@ -262,6 +265,14 @@ textarea:focus {
 button {
   outline: 0; }
 
+.panel, .panel--centered {
+  padding-top: 1.875em;
+  padding-bottom: 1.25em; }
+
+.panel--padded, .panel--padded--centered {
+  padding-top: 5em;
+  padding-bottom: 2.125em; }
+
 .container {
   max-width: 61.875em;
   margin: 0 auto;
@@ -316,8 +327,10 @@ h2, .headline-secondary--grouped, .headline-secondary {
   line-height: 0;
   cursor: pointer; }
 
-.headline-primary--grouped {
-  margin-bottom: 0; }
+.headline-primary {
+  margin-bottom: 1.66667em; }
+  .headline-primary--grouped {
+    margin-bottom: 0; }
 .headline-secondary {
   margin-bottom: 0.91667em; }
   .headline-secondary--grouped {
