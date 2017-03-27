@@ -1,4 +1,9 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .srt, .form__label--hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -17,7 +22,7 @@
 .panel--centered, .panel--padded--centered, [class^="btn--"] {
   text-align: center; }
 
-.centered {
+.centered, .grid {
   float: none;
   margin-left: auto;
   margin-right: auto; }
@@ -207,13 +212,10 @@ th {
   box-sizing: border-box; }
 
 body {
+  color: grey;
   font-size: 16px;
-  line-height: 1.5;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-header {
-  text-align: center;
-  padding: 3em 0; }
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5; }
 
 h3 {
   font-size: 1.125em; }
@@ -233,23 +235,21 @@ a {
   font-weight: 400; }
 
 p {
-  font-size: 1.125em;
-  line-height: 1.5;
   margin: 0 0 1.66667em;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 1.125em;
+  line-height: 1.5; }
 
 blockquote {
-  font-size: 1.5em;
-  font-style: italic;
   font-weight: 300;
-  margin: 1.33333em 0;
-  padding: 0 0 0 5%;
-  border-left: solid 0.33333em #ebecec; }
-
-img {
-  margin-bottom: 1.5em;
-  max-width: 100%;
-  height: auto; }
+  font-style: italic;
+  font-size: 1.25em; }
+  @media (min-width: 769px) {
+    blockquote {
+      margin: 1.33333em 0;
+      padding: 0 0 0 5%;
+      border-left: 0.33333em solid #ebecec;
+      font-size: 1.5em; } }
 
 ul,
 li {
@@ -257,9 +257,16 @@ li {
   padding: 0;
   list-style-type: none; }
 
+img {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  height: auto; }
+
 input,
 textarea {
   display: block;
+  padding: 15px;
+  width: 100%;
   outline: 0;
   border: 0; }
 
@@ -270,6 +277,12 @@ textarea:focus {
 button {
   outline: 0; }
 
+footer {
+  border-top: 1px solid #ebecec; }
+  footer p {
+    font-size: 1em;
+    margin-top: 1.375em; }
+
 .panel, .panel--centered {
   padding-top: 1.875em;
   padding-bottom: 1.25em; }
@@ -278,60 +291,63 @@ button {
   padding-top: 5em;
   padding-bottom: 2.125em; }
 
-.container {
-  max-width: 61.875em;
-  margin: 0 auto;
-  padding: 0 0.9375em 0 0.9375em; }
+.grid {
+  width: 90%; }
+  [class*="grid__col--"] > .grid {
+    width: 100%; }
+  @media (min-width: 1100px) {
+    .grid {
+      max-width: 1050px; } }
 
 @media (min-width: 769px) {
   .grid__col--1 {
-    width: 4.34783%; }
+    width: 6.5%; }
 
   .grid__col--2 {
-    width: 10.03344%; }
+    width: 15%; }
 
   .grid__col--3 {
-    width: 15.71906%; }
+    width: 23.5%; }
 
   .grid__col--4 {
-    width: 21.40468%; }
+    width: 32%; }
 
   .grid__col--5 {
-    width: 27.0903%; }
+    width: 40.5%; }
 
   .grid__col--6 {
-    width: 32.77592%; }
+    width: 49%; }
 
   .grid__col--7 {
-    width: 38.46154%; }
+    width: 57.5%; }
 
   .grid__col--8 {
-    width: 44.14716%; }
+    width: 66%; }
 
   .grid__col--9 {
-    width: 49.83278%; }
+    width: 74.5%; }
 
   .grid__col--10 {
-    width: 55.51839%; }
+    width: 83%; }
 
   .grid__col--11 {
-    width: 61.20401%; }
+    width: 91.5%; }
 
   .grid__col--12 {
-    width: 66.88963%; } }
+    width: 100%; } }
 @media (min-width: 1px) and (max-width: 768px) {
-  [classes^="grid__col--"] {
+  [class^="grid__col--"] {
     margin-top: 0.75em;
     margin-bottom: 0.75em; } }
 @media (min-width: 769px) {
-  [classes^="grid__col--"] {
+  [class^="grid__col--"] {
     float: left;
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px; }
-    [classes^="grid__col--"] + [classes^="grid__col--"] {
-      margin-left: 1.33779%; }
-    [classes^="grid__col--"]:last-of-type {
+    [class^="grid__col--"] + [class^="grid__col--"] {
+      margin-left: 2%; }
+    [class^="grid__col--"]:last-of-type {
       float: right; } }
 
 .form__btn, [class^="btn--"] {
@@ -432,10 +448,16 @@ h2, .headline-secondary--grouped, .headline-secondary {
   background-color: #9279c3; }
 
 [class^="btn--"] {
-  margin-bottom: 1.42857em;
-  width: auto;
-  display: inline-block;
-  margin-right: 1.07143em; }
+  margin-bottom: 1.42857em; }
+  @media (min-width: 1px) and (max-width: 768px) {
+    [class^="btn--"] {
+      width: 100%; } }
+  @media (min-width: 769px) {
+    [class^="btn--"] {
+      width: auto;
+      display: inline-block; }
+      [class^="btn--"] + [class^="btn--"] {
+        margin-left: 20px; } }
 
 .navbar {
   position: relative;
